@@ -24,6 +24,7 @@ export class MoviesController {
   findOne(@Param('id') id: string) {
     return this.moviesService.findOne(id);
   }
+
   @Get(':id/detail')
   @ApiOperation({ summary: 'Get movie details by imdbID' })
   @ApiResponse({ status: 200, description: 'Detailed movie info' })
